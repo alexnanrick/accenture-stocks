@@ -19,7 +19,7 @@ export class AppComponent {
 
   getStocks() {
     this.stockService.getStocks().subscribe(
-      data => { this.stocks = data  },
+      data => { this.stocks = data },
       err => console.error(err),
       () => console.log('done loading stocks')
     );
