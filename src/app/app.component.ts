@@ -14,14 +14,6 @@ export class AppComponent {
   constructor(private stockService: StockService) {}
 
   ngOnInit() {
-    this.getStocks();
-  }
-
-  getStocks() {
-    this.stockService.getStocks().subscribe(
-      data => { this.stocks = data },
-      err => console.error(err),
-      () => console.log('done loading stocks')
-    );
+    this.stockService.getStocks();
   }
 }
